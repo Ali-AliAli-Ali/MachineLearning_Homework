@@ -19,7 +19,7 @@ if mode == 'lin':
     for i in range(0, n):
         x = i
         maxX = max(maxX, x)
-        y = 20*i + random.randint(1, 33)# random.randint(0, i)
+        y = random.randint(0, i*20)#20*i + random.randint(1, 33)# random.randint(0, i)
         plt.scatter(x, y)
         A[i][1] = AT[1][i] = x
         Y[i][0] = y
@@ -40,7 +40,7 @@ elif mode == 'pol':
     for i in range(0, n):
         x = i
         maxX = max(maxX, x)
-        y = i+i*i+i*i*i+i*i*i*i + random.randint(0, 5)
+        y = random.randint(0, i*20)#i+i*i+i*i*i+i*i*i*i + random.randint(0, 5)
         plt.scatter(x, y)
 
         for j in range(1, degree):
@@ -62,7 +62,7 @@ else:
     for i in range(0, n):
         x = i
         maxX = max(maxX, x)
-        y = exp(i)
+        y = random.randint(1, (i+1)*20)#exp(i)
         plt.scatter(x, y)
         A[i][1] = AT[1][i] = x
         Y[i][0] = log(y)
