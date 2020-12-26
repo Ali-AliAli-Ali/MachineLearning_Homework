@@ -10,7 +10,7 @@ amountTestPoints = pointGenerator.amountTestDeterminer(amountPoints)
 amountClusters = int(input())
 steps = 5
 
-Points, testPoints = pointGenerator.circles(amountPoints)
+Points, testPoints = pointGenerator.usual(amountPoints)
 centroids = np.zeros((amountClusters, 2))
 
 
