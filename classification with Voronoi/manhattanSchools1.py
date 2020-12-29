@@ -25,9 +25,8 @@ def findDaWae(x, y, step, labyrinth, n):
         if (labyrinth[x-1][y] == '.') or (labyrinth[x-1][y] == 'M') or (type(labyrinth[x-1][y]) == int) and (labyrinth[x-1][y] > step):
             findDaWae(x-1, y, step+1, labyrinth, n)
         if (labyrinth[x][y-1] == '.') or (labyrinth[x][y-1] == 'M') or (type(labyrinth[x][y-1]) == int) and (labyrinth[x][y-1] > step):
-            findDaWae(x, y-1, step+1, labyrinth, n)    #у нас известны ближайшие школы для каждого человека (массив с номерами школ, ближайших
-        return labyrinth                               #по Вороному к данному человеку, и массив школ соседних с этой). Соответственно, нужно
-                                                       #обрабатывать только эти школы для каждого человека.
+            findDaWae(x, y-1, step+1, labyrinth, n)    
+        return labyrinth                               
 
 def findClosestSchool(labyrinth, min, entersList, clFirst, neiList):
     i = clFirst
